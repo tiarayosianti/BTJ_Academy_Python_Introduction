@@ -1,0 +1,13 @@
+# Latihan 1.3: Manipulasi String untuk Ekstraksi Data
+# 1. Insert data logs
+logs = ["ERROR: Disk Full on ServerA", 
+        "INFO: User login success", 
+        "WARNING: High CPU on ServerB", 
+        "ERROR: Database connection lost"]
+
+# 2. Lakukan loop pada logs. Dengan menggunakan method string (.startswith(), .split()), 
+# ekstrak dan tampilkan hanya pesan "ERROR" beserta detail spesifiknya.
+for log in logs:
+    if log.startswith("ERROR"):
+        detail = log.split(":")[1]  
+        print(f"ERROR: {detail}")
