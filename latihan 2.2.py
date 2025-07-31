@@ -14,4 +14,4 @@ with open(new_path, "w") as file:
         line = f"{product['Product']},{product['Price']:.2f}\n"
         file.write(line)
 
-print("File 'high_value_products.txt' berhasil dibuat dengan data produk yang berharga lebih dari 100.00")
+print("File 'tiara_high_value_products.txt' berhasil dibuat dengan data produk yang berharga lebih dari 100.00")
