@@ -68,7 +68,6 @@ try:
         # Key Redis → ip_address:timestamp-minute
         key = f"count:{ip}:{datetime.utcnow().strftime('%Y-%m-%d-%H-%M')}"
         count = redis_client.incr(key)
-        # print(f"IP {ip} accessed the web {count} times.")
         redis_client.expire(key, 60)  # TTL 1 menit (6 detik)
         print(f"[INFO] IP {ip} akses ke-{count} dalam 1 menit")
 
@@ -82,3 +81,4 @@ finally:
     consumer.close()
     pg_cur.close()
     pg_conn.close()
+
